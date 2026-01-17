@@ -277,14 +277,7 @@ Test Cases incluidos:
 - cypress/reports/html/index.html         -> Reporte HTML visual
 
 ---
+## Autor
 
-## COMANDOS RÁPIDOS DE REFERENCIA:
-
-```bash
-npm install              # Instalar dependencias
-npm test                 # Ejecutar todas las pruebas
-npm run test:headed      # Abrir Cypress en el navegador para ver visualmente el proceso
-npm run test:e2e         # Solo pruebas E2E
-npm run report:full      # Generar reporte HTML
-```
+Carlos Meneses Prueba técnica – Automatización E2E con Cypress
 
