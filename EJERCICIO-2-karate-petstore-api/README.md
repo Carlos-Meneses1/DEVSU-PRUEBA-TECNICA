@@ -62,7 +62,7 @@ PRUEBA_TECNICA_API_PETSTORE/
 **Opción 2:** Clonar el repositorio
 
 ```bash
-git clone 
+git clone https://github.com/Carlos-Meneses1/DEVSU-PRUEBA-TECNICA.git
 cd 
 ```
 
