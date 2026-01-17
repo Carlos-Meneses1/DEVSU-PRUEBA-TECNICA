@@ -7,7 +7,7 @@ Este Repositoriocontiene dos proyectos independientes de automatización de prue
 ### 1️⃣ Cypress – E2E DemoBlaze
 Automatización del flujo completo de compra en DemoBlaze utilizando Cypress.
 
-📂 Ruta: `/EJERCICIO-1-cypress-demoblaze-e2e`
+📂 Ruta: ` cd EJERCICIO-1-cypress-demoblaze-e2e `
 
 **Tecnologías**
 - Cypress
@@ -19,7 +19,7 @@ Automatización del flujo completo de compra en DemoBlaze utilizando Cypress.
 ### 2️⃣ Karate – API PetStore
 Automatización de pruebas REST para la API PetStore utilizando Karate Framework.
 
-📂 Ruta: `/EJERCICIO-2-karate-petstore-api`
+📂 Ruta: ` cd EJERCICIO-2-karate-petstore-api `
 
 **Tecnologías**
 - Karate
