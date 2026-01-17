@@ -1,0 +1,167 @@
+================================================================================
+CONCLUSIONES Y HALLAZGOS DEL EXAMEN PRÁCTICO DE QA
+Fecha: Enero 2026
+Sitio probado: https://www.demoblaze.com/
+Framework utilizado: Cypress v13.17.0
+================================================================================
+
+
+1. RESUMEN EJECUTIVO
+================================================================================
+
+Se completó exitosamente el ejercicio del examen práctico enfocado en:
+
+- Automatización E2E del flujo de compra en la plataforma DemoBlaze (3 test cases)
+
+RESULTADO GENERAL: TODOS LOS TESTS PASARON EXITOSAMENTE (3/3)
+
+Total de test cases implementados: 3  
+Cobertura del flujo principal: 100%  
+Framework: Cypress.io v13.17.0  
+Lenguaje: JavaScript (ES6+)  
+Tiempo total de ejecución: ~30-45 segundos  
+
+
+2. EJERCICIO - AUTOMATIZACIÓN E2E
+================================================================================
+
+2.1 FLUJO IMPLEMENTADO:
+-----------------------
+1. Agregar dos productos al carrito (Samsung galaxy s6 y Nokia lumia 1520)
+2. Visualizar el carrito y verificar productos agregados
+3. Completar el formulario de compra con datos de prueba
+4. Finalizar la compra y validar el mensaje de confirmación
+
+2.2 TEST CASES:
+---------------
+- TC001: Flujo completo de compra exitoso
+- TC002: Validación del cálculo correcto del total del carrito
+- TC003: Funcionalidad de eliminar productos del carrito
+
+2.3 PRINCIPALES HALLAZGOS:
+--------------------------
+• Los tiempos de carga del sitio pueden variar, por lo que se requirió el uso de esperas explícitas (cy.wait)
+• Las alertas JavaScript generadas al agregar productos fueron manejadas correctamente con cy.on('window:alert')
+• El mensaje de confirmación de compra utiliza Sweet Alert (selector '.sweet-alert')
+• Es necesario retornar manualmente al home después de agregar productos para continuar el flujo
+
+2.4 MEJORES PRÁCTICAS IMPLEMENTADAS:
+-------------------------------------
+✓ Uso de comandos personalizados reutilizables (commands.js)
+✓ Data-Driven Testing mediante fixtures (test-data.json)
+✓ Código comentado y documentado de forma clara
+✓ Generación automática de evidencias (videos y screenshots)
+✓ Validaciones en cada paso del flujo E2E
+
+
+3. ARQUITECTURA DEL PROYECTO
+================================================================================
+
+ESTRUCTURA:
+-----------
+cypress/
+├── e2e/              → Tests E2E
+├── fixtures/         → Datos de prueba centralizados
+├── support/          → Comandos personalizados y configuración global
+├── videos/           → Evidencias de ejecución
+├── reports/          → Reportes HTML con Mochawesome
+
+PRINCIPIOS APLICADOS:
+---------------------
+• DRY (Don't Repeat Yourself): reutilización de comandos
+• Data-Driven Testing: separación de datos y lógica
+• Separation of Concerns: estructura modular del proyecto
+• Código legible y mantenible: nombres descriptivos y comentarios
+
+
+4. TECNOLOGÍAS Y CONFIGURACIÓN
+================================================================================
+
+STACK TECNOLÓGICO:
+------------------
+• Framework: Cypress v13.17.0
+• Lenguaje: JavaScript (ES6+)
+• Reportes: Mochawesome v7.1.4
+• Node.js: v16+
+• Navegadores: Chrome, Firefox, Edge
+
+CONFIGURACIÓN:
+--------------
+• Timeout por defecto: 10000ms
+• Viewport: 1280x720
+• Videos: Habilitados
+• Screenshots: Automáticos en fallos
+• Base URL: https://www.demoblaze.com
+
+
+5. DESAFÍOS Y SOLUCIONES
+================================================================================
+
+DESAFÍO 1: Tiempos de carga inconsistentes  
+Solución: Uso estratégico de cy.wait() combinado con validaciones mediante .should()
+
+DESAFÍO 2: Manejo de alertas JavaScript  
+Solución: Captura y validación de alertas utilizando cy.on('window:alert')
+
+DESAFÍO 3: Navegación no automática tras ciertas acciones  
+Solución: Control explícito de la navegación mediante cy.visit('/') para asegurar continuidad del flujo
+
+
+6. MÉTRICAS DE CALIDAD
+================================================================================
+
+COBERTURA:
+----------
+• Tests E2E: 3 test cases
+• Flujo principal cubierto: 100%
+• Success rate: 100%
+
+EVIDENCIAS:
+-----------
+• Videos completos de ejecución
+• Screenshots automáticos (sin fallos detectados)
+• Reportes HTML con estadísticas y gráficos
+• Logs detallados de ejecución
+
+
+7. CONCLUSIÓN FINAL
+================================================================================
+
+El examen práctico se completó exitosamente mediante la automatización E2E del
+flujo de compra del sitio DemoBlaze utilizando Cypress.io, validando de forma
+integral la experiencia del usuario desde la selección de productos hasta la
+confirmación final de la compra.
+
+Los tres casos de prueba implementados pasaron al 100%, evidenciando:
+✓ Uso correcto del framework Cypress
+✓ Automatización efectiva de flujos críticos de negocio
+✓ Organización clara del código mediante comandos reutilizables
+✓ Datos de prueba centralizados y fáciles de mantener
+✓ Documentación clara y estructurada
+
+La solución demuestra que Cypress.io fue empleado de manera eficiente para
+validar la funcionalidad y estabilidad del flujo E2E, cumpliendo plenamente
+los objetivos del examen práctico y dejando una base sólida para futuras
+extensiones o integración en entornos CI/CD.
+
+
+LOGROS PRINCIPALES:
+-------------------
+✓ Código limpio, comentado y mantenible
+✓ Buenas prácticas de testing aplicadas
+✓ Reportes detallados y profesionales
+✓ Documentación clara y completa
+✓ 100% de tests E2E ejecutados con éxito
+
+
+================================================================================
+AUTOR Y FECHA
+================================================================================
+Autor: Carlos Meneses
+Fecha: Enero 2026
+Framework: Cypress v13.17.0
+Estado: COMPLETO Y FUNCIONAL
+
+================================================================================
+FIN DEL DOCUMENTO
+================================================================================
