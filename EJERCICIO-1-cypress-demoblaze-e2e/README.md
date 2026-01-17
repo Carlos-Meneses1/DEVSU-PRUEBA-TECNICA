@@ -52,7 +52,7 @@ examen-qa-demoblaze/
 **Opción 2:** Clonar el repositorio
 
 ```bash
-git clone 
+git clone https://github.com/Carlos-Meneses1/DEVSU-PRUEBA-TECNICA.git
 cd 
 ```
 
